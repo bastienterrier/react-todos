@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+
+import styles from './statics/style.module.css';
+import store from './store';
+import Todolist from './todo/Todolist';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <main className={styles['main-section']}>
+        <Todolist />
+      </main>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,7 @@
+.main-section {
+  display: flex;
+}
+
+.oldApp {
+  border: solid black 1px;
+}
